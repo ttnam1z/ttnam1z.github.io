@@ -1,3 +1,86 @@
+html {
+	font-size:62.5%;
+}
+body {
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: white;
+	background-color: #1d1d1d;
+	display:block;
+	padding-left: 13rem;
+	margin: 0px 0px 0px 0px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+
+nav {
+	display: block;
+}
+
 label {
   display: inline-block;
+}
+
+.fixed-left {
+	position: fixed;
+	top: 0;
+	right: auto;
+	left: 0;
+	bottom: 0;
+	z-index: 9999;
+}
+
+.navi-bar {
+	width: 13rem;
+	background-color: #282626;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+}
+
+.nav-name {
+	text-align: center;
+	width: 100%;
+	display: block;
+	line-height: 15rem;
+	border-bottom: 1px solid #282626;
+	background-color: black;
+}
+
+.nav-item a {
+	text-align: center;
+	width: 100%;
+	display: block;
+	line-height: 5rem;
+	border-bottom: 1px solid #e11414;
+}
+
+.nav-item a:hover {
+	color: #ee9d35;
+}
+
+#mainscreen {
+	
+}
+
+#about_seft {
+	height: 100vh;
+	width: 100%;
+	background: linear-gradient(to bottom, rgba(140, 100, 81, 0.5) 0%, rgba(125, 78, 43, 0.5) 100%), url("../images/background1.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.text-zone {
+	display: flex;
+	flex-direction:column;
+	padding-left: 5rem;
+}
+
+h1 {
+	font-size: 8rem;
+	line-height: 8rem;
+	font-weight: 1;
 }

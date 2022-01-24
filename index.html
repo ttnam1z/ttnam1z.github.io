@@ -2,40 +2,46 @@
 <html>
 <head>
 	<title>CLIENT</title>
-
-	<link rel="stylesheet" type="text/css" href="style.css">
-    <style>
-        label {
-                display: inline-block;
-            }
-        
-    </style>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <body>
-    <div id = "loginform" name="login" style="display: block;">
-        <h2>LOGIN</h2>
-        <label style="width: 80px;">User Name</label>
-        <input type="text" name="user"><br><br>
-        <label style="width: 80px;">Password </label>
-        <input type="password" name="pass"><br><br>
-        <button onclick="onLogin()">Submit</button>
-        <button onclick="onChangeRegister()">Register</button>
-    </div>
-    <div id = "registerform" style="display: none;">
-        <h2>REGISTER</h2>
-        <label style="width: 80px;">User Name</label>
-        <input type="text" name="user"><br><br>
-        <label style="width: 80px;">Password </label>
-        <input type="password" name="pass"><br><br>
-        <button onclick="onRegister()">Submit</button>
-        <button onclick="onChangeLogin()">Login</button>
-    </div>
+    <div id="nav_menu" class="fixed-left navi-bar">
+		<div class="nav-name" href="file:///D:/Work/web/user%20profile/index.html">
+		TTNam
+		</div>
+		<nav class="nav-item">
+			<a>Education</a>
+			<a>Work</a>
+			<a>Projects</a>
+			<a>Contact</a>
+		</nav>
+		
+	</div>
 
-    <div id="mainscreen" style="display: none;">
-
+    <div id="mainscreen">
+		<div id="about_seft">
+			<div class="text-zone">
+				<h1>Hi,<br>
+					I'm T.T.Nam<br>
+				</h1>
+				<span>I am a software developer and a young scientist.</span><br>
+				<span>I have experience in C++, OpenGL and Python.</span><br>
+				<span>I am currently interested in machine learning, especially deep neural network.</span><br>
+			</div>
+		</div>
+		
+		<div id="education_">
+		</div>
+		<div id="work_">
+		</div>
+		<div id="projects_">
+		</div>
+		<div id="contact_">
+		</div>
+		
     </div>
 
 	<!--script type="text/javascript" src="/socket.io/socket.io.js"></script-->
-	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>
 </body>
 </html>
