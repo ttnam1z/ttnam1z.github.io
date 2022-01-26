@@ -64,6 +64,15 @@ label {
 	position: relative;
 }
 
+#mainscreen canvas {
+	z-index: -1;
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: inline-block;
+	background-color: black;
+}
+
 #mainscreen section {
 	padding-left: 5rem;
 	width: 100%;
@@ -161,6 +170,18 @@ h3 {
 	position: relative;
 	overflow: hidden;
 	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.closebtn {
+	font-size: 3rem;
+	cursor: pointer;
+	float: right;
+	width: 4rem;
+	background-color: #c41a1a;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .item-list {
@@ -176,21 +197,41 @@ h3 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #023546;
+	cursor: pointer;
 }
 
 .eff-zoom:hover{
-	transform: scale(1.14);
+	transform: scale(1.2);
 }
 
-description {
+deslt {
 	display: none;
 	position: fixed;
 	height: 100vh;
 	width: 50%;
 	top: 0;
 	left: 20%;
-	background-color: white;
+	background-color: #eed485;
 	color: black;
 	z-index: 9999;
 	padding-left: 3rem;
 }
+
+overlay {
+	display: none;
+	background: url(../images/overlay.png) repeat 0 0;
+	z-index: 9998;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	opacity: 0.9;
+	top: 0;
+	left: 0;
+}
+
+description {
+	display: none;
+}
+
