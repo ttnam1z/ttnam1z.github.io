@@ -1,18 +1,20 @@
 //script
 var check_view = false;
-let view_item, scene, camera, renderer, points_info, starGeo, stars;
+let view_item, scene, camera, renderer, points_info, starGeo, snow;
 $(document).ready(function(){
-  $(".item-list li").click(function(){
-	if (check_view) { return};
-	$("overlay").show();
-	$("deslt").show();
-    view_item = "#cpn_" + $(this).attr("pos");
-	$(view_item).show();
-	check_view = true;
-	
-	//$("#cpn_1").css("display","block");
-	console.log("haha");
-  });
+	function showDescription(){
+		if (check_view) { return};
+		$("overlay").show();
+		$("deslt").show();
+		view_item = "#cpn_" + $(this).attr("pos");
+		$(view_item).show();
+		check_view = true;
+
+		//$("#cpn_1").css("display","block");
+		console.log("haha");
+	}
+  $(".item-list li").click(showDescription);
+  $(".ms-item").click(showDescription);
   
   $(".closebtn").click(function(){
 	 $("deslt").hide();
@@ -25,11 +27,11 @@ $(document).ready(function(){
 	scene = new THREE.Scene();
 	camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
 	camera.position.z = 5;
-	camera.rotation.x = Math.PI/2;
+	//camera.rotation.x = Math.PI/2;
 	
 	renderer = new THREE.WebGLRenderer();
 	renderer.setSize(window.innerWidth, window.innerHeight);
-	$("#mainscreen").append( renderer.domElement );
+	$("#mainscreen").append(renderer.domElement);
 	
 	
 	let points = [];
@@ -55,8 +57,8 @@ $(document).ready(function(){
 	  map: sprite
 	});
 	
-	stars = new THREE.Points(starGeo,starMaterial);
-	scene.add(stars);
+	snow = new THREE.Points(starGeo,starMaterial);
+	scene.add(snow);
 	
 	
 	//let geometry = new THREE.PlaneGeometry(1,window.innerHeight/window.innerWidth,1,1);
@@ -71,8 +73,8 @@ $(document).ready(function(){
 			points_info[i/3].velocity += points_info[i/3].acceleration;
 			points[i+1] -= points_info[i/3].velocity;
 			if(points[i+1] < -200) {
-				points[i+1] = 200;
-				points_info[i/3].velocity = 0;
+				points[i+1] = Math.random() * 600;
+				points_info[i/3].velocity = Math.random();
 			}
 		}
 		/*starGeo.vertices.forEach(p=>{
@@ -85,7 +87,7 @@ $(document).ready(function(){
 		});*/
 		
 		starGeo.attributes.position.needsUpdate = true;
-		stars.rotation.y +=0.002;
+		snow.rotation.y +=0.002;
 		requestAnimationFrame(animate);
 		//plane.rotation.x += 0.01;
 		//plane.rotation.y += 0.01;

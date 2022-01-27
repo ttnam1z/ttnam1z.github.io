@@ -154,6 +154,10 @@ h3 {
 	transform: matrix(1.15, 0, 0, 1.15, 60, 0);
 }
 
+#work_ .ms-item {
+	cursor: pointer;
+}
+
 #projects_ {
 	
 }
@@ -166,7 +170,7 @@ h3 {
 }
 
 #projects_ ul li {
-	width: 25%;
+	width: 23%;
 	position: relative;
 	overflow: hidden;
 	text-align: center;

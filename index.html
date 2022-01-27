@@ -30,7 +30,8 @@
 					I'm T.T.Nam<br>
 				</h1>
 				<span>I am a software developer and a young scientist.</span><br>
-				<span>I have experience in C++, OpenGL and Python.</span><br>
+				<span>I have work experience in C/C++, HTML5, Javascript, and OpenGL.</span><br>
+				<span>I did some personal projects in Python.</span><br>
 				<span>I am currently interested in machine learning, especially deep neural network.</span><br>
 			</div>
 		</section>
@@ -61,7 +62,7 @@
 		<section id="work_">
 			<h2>Work Experience</h2><br>
 			
-			<div class="ms-item">
+			<div class="ms-item" pos="31">
 				<img class="item-pic" src="images/gameloft.png">
 				<div class="item-info">
 					<h3>Software Engineer</h3>
@@ -71,7 +72,7 @@
 				</div>
 			</div>
 			
-			<div class="ms-item">
+			<div class="ms-item" pos="32">
 				<img class="item-pic" src="images/toshiba.jpg">			
 				<div class="item-info">
 					<h3>Software Engineer</h3>
@@ -148,7 +149,7 @@
 						</div>
 					</li>
 					
-					<li pos="7">
+					<li pos="27">
 						<div class="eff-zoom">
 							 Classify handwritten digits
 						</div>
@@ -192,7 +193,7 @@
 				<span>Programming controller application for sorting money system</span><br>
 				<span>The application shows and hande error of system, process information of stages of other machines and send feedback to those machines.</span><br>
 				<span>I analyze requirements, create a detailed design for assigned tasks, code in C/C++, and do exchange tests.</span><br>
-				<span>UI is coded by html5 and warpped by QT. Server is coded in C/C++ with Window socket and message queue to handle messages. Ui and server connects through websocket.</span>
+				<span>UI is coded by html5 and warpped by QT. Server is coded in C/C++ with Window socket and message queue to handle messages. UI and server connects through websocket.</span>
 			</div>
 		</description>
 		
@@ -207,66 +208,112 @@
 		
 		<description id="cpn_21">
 			<div class="text-zone">
-				<h1>Sorting Letter System<br></h1>
-				<span>Programming logging tools for sorting letter system</span><br>
-				<span>The application is coded in C# to show and search logs, errors.</span><br>
-				<span>I analyze requirements, create a detailed design for assigned tasks, coding in C#, and do exchange tests.</span><br>
+				<h1>Detect modulation and filter<br></h1>
+				<span>Detect modulation and filter based on constellation image</span><br>
+				<span>This project used deep learning to classify received signal modulation and filter parameters. 
+					Signal data and labels are simulated in Mathlab and are collected into training set and testing set.
+					The detection system contains 2 parts. 
+					First part is preprocess block that transform signal data into constellation images. 
+					Those images and labels are sent to second part (trained Alexnet model). 
+					Output of second block is modulation and filter parameter.<br>
+					I coded project in Python with Tensorflow framework.
+					</span>
 			</div>
 		</description>
 		
 		<description id="cpn_22">
 			<div class="text-zone">
-				<h1>Sorting Letter System<br></h1>
-				<span>Programming logging tools for sorting letter system</span><br>
-				<span>The application is coded in C# to show and search logs, errors.</span><br>
-				<span>I analyze requirements, create a detailed design for assigned tasks, coding in C#, and do exchange tests.</span><br>
+				<h1>Distributed chat system<br></h1>
+				<span>A system for text messages exchange between users with block feature</span><br>
+				<span>This project creates chat system that are distributed.
+					My chat system contains 2 servers and many chat clients and a mysql database server. Those servers connect to each other through websocket. 
+					A client connects to one server through websocket.
+					When one server has events (user events, server error, database error), it will inform the other by message.
+					I coded project in Nodejs.</span><br>
 			</div>
 		</description>
 		
 		<description id="cpn_23">
 			<div class="text-zone">
-				<h1>Sorting Letter System<br></h1>
-				<span>Programming logging tools for sorting letter system</span><br>
-				<span>The application is coded in C# to show and search logs, errors.</span><br>
-				<span>I analyze requirements, create a detailed design for assigned tasks, coding in C#, and do exchange tests.</span><br>
+				<h1>SPADE algorithm<br></h1>
+				<span>Discovering significant sequential patterns with SPADE algorithm</span><br>
+				<span>This project implements SPADE algorithm in Python and compares found sequential patterns result to SPADE function in R result. 
+					I read paper “SPADE: An Efﬁcient Algorithm for Mining Frequent Sequences” then coded based on the paper.
+					</span><br>
 			</div>
 		</description>
 		
 		<description id="cpn_24">
 			<div class="text-zone">
-				<h1>Sorting Letter System<br></h1>
-				<span>Programming logging tools for sorting letter system</span><br>
-				<span>The application is coded in C# to show and search logs, errors.</span><br>
-				<span>I analyze requirements, create a detailed design for assigned tasks, coding in C#, and do exchange tests.</span><br>
+				<h1>Detect emotion in text sentences<br></h1>
+				<span>Discovering emotion by using Bag of Word and Kmeans</span><br>
+				<span>The application discovers emotional state in text.
+					I used Bag of Word algorithm to preprocess the text sentence. The extracted features are vector of appearance words.
+					This features with labels is clustered by Kmeans algorithm.
+					I coded project in Python.</span><br>
 			</div>
 		</description>
 		
 		<description id="cpn_25">
 			<div class="text-zone">
-				<h1>Sorting Letter System<br></h1>
-				<span>Programming logging tools for sorting letter system</span><br>
-				<span>The application is coded in C# to show and search logs, errors.</span><br>
-				<span>I analyze requirements, create a detailed design for assigned tasks, coding in C#, and do exchange tests.</span><br>
+				<h1>Classify apple quality<br></h1>
+				<span>Classify apple quality by using Kmeans and SVM</span><br>
+				<span>The application identifies fruit diseases by fruit picture.
+					The system includes 3 parts: data preprocess, feature extraction, training and classification.
+					Data preprocess detects the infected region by using Kmeans. In next step, Local Binary Patterns is used to extract feature from infected region only.
+					In last step, we use a one vs rest SVM model to classify.
+					This is a project of team 3 people. I'm in charge of data preprocess part. 
+					I coded Kmeans algorithm in Python then use it to detect infected region.</span><br>
 			</div>
 		</description>
 		
 		<description id="cpn_26">
 			<div class="text-zone">
-				<h1>Sorting Letter System<br></h1>
-				<span>Programming logging tools for sorting letter system</span><br>
-				<span>The application is coded in C# to show and search logs, errors.</span><br>
-				<span>I analyze requirements, create a detailed design for assigned tasks, coding in C#, and do exchange tests.</span><br>
+				<h1>Classify fashion items<br></h1>
+				<span>Create multi-layers neural networks to recogize fashion items</span><br>
+				<span>This project is in Octave.
+					I created 2 layers neural networks and implemented backpropagation.
+					I modified the network to have better result and reduce overfit: custom sigmoid function, choose learning rate for each layer.
+					Those experiments is based on "Efficient BackProp" paper.</span><br>
 			</div>
 		</description>
 		
 		<description id="cpn_27">
 			<div class="text-zone">
-				<h1>Sorting Letter System<br></h1>
-				<span>Programming logging tools for sorting letter system</span><br>
-				<span>The application is coded in C# to show and search logs, errors.</span><br>
-				<span>I analyze requirements, create a detailed design for assigned tasks, coding in C#, and do exchange tests.</span><br>
+				<h1>Classify handwritten digits<br></h1>
+				<span>Classify handwritten digits by using perceptron algorithm</span><br>
+				<span>This project is in Octave.
+					I implemented OVO and OVR and 1V2 algorithm with perceptron to classify multi classes.
+					Testing extend feature method effect in classification.</span><br>
 			</div>
 		</description>
+		
+		<description id="cpn_31">
+			<div class="text-zone">
+				<h1>Gameloft Han Studio<br></h1>
+				<span>I have done projects: Disney Magic Kingdom and Game License.<br>
+					•	Disney Magic Kingdom: Get in charge of the graphic bug for each update of the Disney Magic Kingdom game in Android. 
+					vertex shader, images, code C++ to fix bugs.<br>
+					•	Game License: Modify game image, sound, screen for China game retrictions. 
+					Create a game profile for the license test in China. 
+					Change code C++ or Flash Actionscript to remove restriction effect in game, create game profile and profile menu screen. 
+					</span><br>	
+			</div>
+		</description>
+		
+		<description id="cpn_32">
+			<div class="text-zone">
+				<h1>Toshiba Software Development<br></h1>
+				<span>I have done projects: Sorting Money System and Sorting Letter System.<br>
+					•	Sorting Money System: The applicatin shows and hande error of system, process information of stages of other machines and send feedback to those machines. 
+					I analyze requirements, create a detailed design for assigned tasks, code in C/C++, and do exchange tests. UI is coded by html5 and warpped by QT. 
+					Server is coded in C/C++ with Window socket and message queue to handle messages. UI and server connects through websocket.<br>
+					•	Sorting Letter System: Application is coded in C# to show and search logs, errors. 
+					I analyze requirements, create a detailed design for assigned tasks, coding in C#, and do exchange tests.
+					</span><br>
+			</div>
+		</description>
+		
 		<canvas></canvas>
 	</deslt>
 	
