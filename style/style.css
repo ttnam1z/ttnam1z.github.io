@@ -239,3 +239,7 @@ description {
 	display: none;
 }
 
+#contact_ {
+	height: 100vh;
+	/*width: 100%;*/
+}

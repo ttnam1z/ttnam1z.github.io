@@ -16,6 +16,15 @@ $(document).ready(function(){
   $(".item-list li").click(showDescription);
   $(".ms-item").click(showDescription);
   
+  $(".nav-item a").click(function(){
+	  var href = $(this).attr("lk");
+	  var pos = $(href).offset(); 
+	  window.scrollTo(0,pos.top);
+  });
+  $(".nav-name").click(function(){
+		window.scrollTo(0,0);
+  })
+  
   $(".closebtn").click(function(){
 	 $("deslt").hide();
 	 $(view_item).hide();
